@@ -248,6 +248,7 @@ async function getBookmarks(user, {limit=1}={}) {
  * username: string
  */
 function getRecommendations(username) {
+  $('#message').text('Retrieving your bookmarks');
   var you = new Link(username, BASE_USER_URL + username);
   return getBookmarks(you).then(bookmarks => {
     bookmarks = bookmarks.filter(bookmark => bookmark.stats['bookmarks'] > 0);
@@ -255,6 +256,7 @@ function getRecommendations(username) {
     var bookmark = bookmarks[Math.floor(Math.random() * bookmarks.length)];
     return bookmark.bookmarkers().then(users => {
       users = users.filter(user => user.text !== you.text);
+      $('#message').text('Finding similar fics');
       return Promise.all(users.map(user => getBookmarks(user))).then(works => {
         works = works.flatten()
         var seen = {};
