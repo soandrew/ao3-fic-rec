@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>AO3 Fic Recommender</title>
+    <meta name="description" content="Get fic recommendations based on your bookmarks.">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Page Content -->
+    <div class="container text-center">
+      <div id="header" class="row">
+        <h1>AO3 Fic Recommender</h1>
+        <p>Enter your AO3 username to get fic recommendations based on your recent bookmarks.</p>
+        <form>
+          <div class="form-group">
+            <label for="username" class="sr-only">AO3 Username</label>
+            <input type="text" name="username" id="username" class="form-control" placeholder="AO3 Username" autofocus>
+          </div>
+          <div class="form-group">
+            <button type="submit" id="recommend" class="btn">Recommend Fics</button>
+          </div>
+        </form>
+        <small class="text-muted">This site is not affiliated with the Archive of Our Own (AO3) or the Organization for Transformative Works (OTW).</small>
+      </div><!-- /.row -->
+      <div id="loading" class="hidden">Loading<span>.</span><span>.</span><span>.</span></div>
+      <div id="empty" class="hidden">Sorry, no fics found.</div>
+      <ol id="results"></ol>
+    </div><!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Custom scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
