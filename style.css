@@ -401,10 +401,6 @@ body {
   /*background-color: #fff3f3;*/
 }
 
-.tag-item {
-  line-height: 2;
-}
-
 .tag-key {
   display: inline-block;
   width: 120px;
@@ -415,16 +411,18 @@ body {
 }
 
 .tag-value {
-  display:inline-block;
+  display: inline-block;
   width: calc(100% - 130px);
   vertical-align: top;
 }
 
 .tag-value a {
-  padding: 2px 5px 5px 5px;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
   background-color: #e8e8e8;
   color: inherit;
-  white-space: nowrap;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }

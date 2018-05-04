@@ -317,7 +317,7 @@ $(document).ready(function() {
             $('<div>')
               .addClass('tag-item')
               .append($('<div>').addClass('tag-key').text(key + ':'))
-              .append($('<div>').addClass('tag-value').html(work.tags[key].map(tag => tag.link()).join(' ')))
+              .append($('<div>').addClass('tag-value').html(work.tags[key].map(tag => tag.link()).join('')))
           );
         });
         $result
